@@ -1,0 +1,339 @@
+html,body{
+  padding: 0;
+  margin: 0;
+  /*overflow:hidden;*/
+  /*background-image: linear-gradient(to bottom, #0d0225, #111230, #171c3b, #1e2647, #243153, #333e60, #414c6d, #505a7b, #6a6f8e, #8485a1, #9d9cb4, #b7b4c8);*/
+ background : linear-gradient(132deg, #0a0133, #01305a, #01134b, #4d618d, #426c9c); 
+ background-size : 400% 400%;
+  animation : Gradient 15s ease infinite;
+  overflow-x:hidden;
+  /*cursor: cell;*/
+}
+
+@keyframes Gradient {
+  0% {
+       background-position: 0% 50%
+     }
+ 50% { 
+       background-position: 100% 50%
+     }
+100% {
+    background-position: 0% 50%
+    }
+}
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1C3859;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+.section{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+button{
+  position: absolute;
+  margin: 1%;
+  border-radius: 5px;
+  animation: fade-in 0.4s linear 0.1s forwards, heartbeat 2s ease-in-out 0.7s infinite ;
+  animation-delay: 2.2s;
+  visibility: hidden;
+  cursor: pointer;
+  
+  
+}
+h3{
+  color: #130441;
+
+  font-family: 'Passion One', cursive;
+ 
+ 
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+/*------------------SECTION 1---------------*/
+
+#sec1{
+  background-image: 
+ 
+ 
+ url(../img/desert/03_Moon.png);
+background-size: cover;
+
+ 
+ }
+ .background{
+   position: absolute;
+   width: 100%;
+   height: 100vh;
+ 
+   background-image: 
+   
+   
+ url(../img/desert/05_Cloud.png),
+ url(../img/desert/06_Cloud.png),
+ url(../img/desert/07_Cloud.png),
+ url(../img/desert/08_Cloud.png),
+ url(../img/desert/09_Cloudsmall.png),
+ url(../img/desert/10_Cloudsmall.png),
+ url(../img/desert/05_Cloud_bottom.png),
+   /*url(../img/desert/07_Cloud_bottom.png),*/
+   url(../img/desert/fog.png),
+ url(../img/desert/07_Cloud.png),
+ url(../img/desert/08_Cloud.png),
+ url(../img/desert/09_Cloudsmall.png),
+ 
+ /*url(../img/desert/birdflying.gif) no-repeat,*/ 
+ 
+ url(../img/desert/02_Stars.png);
+ 
+ background-size: cover;
+             
+ animation: middle_foreground_effect 70s linear infinite;
+ }
+ @keyframes middle_foreground_effect {
+  100% { background-position-x: 2400px, 2000px, 1800px, 1600px, 1200px;}
+}
+/*BLOCK TEXT*/
+#text_container{
+  display: flex;
+  flex-direction: row; /* A l'otigine row column que en test*/
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  /*height: 100vh;*/
+
+}
+
+h1{
+  color: #130441;
+  font-size: 3vw;
+  font-family: 'Passion One', cursive;
+  text-align: center ;
+  margin-top: 15%;
+  animation: fade-in 0.4s linear 0.1s forwards;
+  visibility: hidden;
+}
+
+
+
+
+#text_container.is-visible{
+
+  
+  animation: fade-in-bottom 0.5s linear 0.5s forwards
+  
+}
+
+
+     
+/*CHARACTER SPRITE*/
+.bird {
+  animation: perso 1.2s steps(10) infinite, fly-right-one 15s linear infinite, fade-in 0.4s linear 0.1s forwards;
+  background: url(../img/bird1.png) ; 
+  width: 128px;
+  height: 182px;
+  position: absolute;
+  margin-top: 10%;
+  visibility: hidden;
+  
+  animation-delay: 2s;
+}
+.bird_2 {
+  animation: perso 1.2s steps(10) infinite, fly-right-one 15s linear infinite, fade-in 0.4s linear 0.1s forwards;
+  background: url(../img/bird1.png) ; 
+  width: 128px;
+  height: 182px;
+  position: absolute;
+  margin-top: 37%;
+  visibility: hidden;
+ 
+  animation-delay: 10s;
+}
+@keyframes perso {
+  from { background-position:    0px;  }
+	to { background-position: -1300px;  }
+}
+@keyframes fly-right-one {
+  to {
+    visibility: visible;
+  }
+	
+	0% {
+		transform: scale(0.3) translateX(-10vw);
+	}
+	
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+	
+	20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+	
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+	
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+}
+
+ /*
+ url(../img/desert/12_Desert.png),
+ url(../img/desert/11_Mountains.png),
+ */  
+
+
+ 
+
+
+/*KEYFRAMES*/
+@keyframes fade-in-bottom {
+ 
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fade-in {
+  to {
+    visibility: visible;
+  }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*SKILL BAR*/
+#wrapper{
+ display: flex;
+ flex-flow: row wrap;
+ margin-left: 5%;
+ text-align:center;
+ width:80vw;
+ background-color: rgb(7, 66, 121);
+  
+
+  border-radius: 30px;
+ /* display: none;*/
+}
+
+.skill_name {
+  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ margin-left:3%;
+ margin-top:1%;
+ width:10vw;
+ height:40px;
+ line-height:40px;
+ font-weight:bold;
+ font-size:1vw;
+ color:white;
+ clear:both;
+ float:left;
+ border-radius:3px 0px 0px 3px;
+}
+
+
+
+.skillbar_wrapper {
+ float:left;
+ position:relative;
+ display:block;
+ margin-bottom:1%;
+ margin-top:1%;
+ width:26.5vw;
+ background-color:#E6E6E6;
+ height:40px;
+ border-radius:0px 3px 3px 0px;
+}
+.skillbar_bar {
+ height:40px;
+ width:0px;
+ border-radius:0px 3px 3px 0px;
+ 
+}
+
+#skillbar_css, #skillbar_bootstrap, #skillbar_sass, #skillbar_jquery, #skillbar_mysql, #skillbar_php, #skillbar_wordpress, #skillbar_prestashop {
+ background-color:#8181F7;
+}
+#skill_css, #skill_bootstrap, #skill_sass, #skill_jquery, #skill_mysql, #skill_php, #skill_wordpress, #skill_prestashop{
+  background-color:#5c5cf3;
+ }
+.skill_bar_percent {
+ position:absolute;
+ right:10px;
+ top:0;
+ font-size:1vw;
+ height:35px;
+ line-height:35px;
+ color:black;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

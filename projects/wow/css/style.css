@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+}
+
+.imgResp {
+    width: 100%;
+    height: auto;
+}
+
+.margeGauche {
+    margin-left: 100px;
+}
+
+.margeDroite {
+    margin-left: 650px;
+}
+
+
+/*** header ***/
+
+header {
+    height: 100vh;
+    background-image: url("../img/wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#logo {
+    width: 20%;
+    position: absolute;
+    top: 30px;
+    right: 100px;
+}
+
+#menu {
+    width: 5%;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: white;
+    text-align: center;
+}
+
+#menu .line {
+    background-color: white;
+    border: solid 3px white;
+    margin: 10px 0;
+}
+
+
+/*** 1ere section ***/
+
+.boiteTexte,
+#boutonJaune {
+    width: 40%;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.boiteTexte p {
+    width: 60%;
+    margin: 0 auto
+}
+
+#blanc {
+    padding: 100px 0;
+    color: coral
+}
+
+#rouge {
+    background-color: crimson;
+    position: relative;
+    padding: 100px 0;
+}
+
+#boutonJaune {
+    color: crimson;
+    text-align: center;
+    background-color: yellow;
+    padding: 20px 0;
+    border-radius: 25px;
+    text-transform: uppercase;
+}
+
+#ilidan {
+    width: 45%;
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+}
+
+
+/*** 2eme section ***/
+
+#noir {
+    background-color: black;
+    padding: 100px 0;
+    color: white;
+    position: relative;
+}
+
+#sorciere {
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+/*** 3eme section ***/
+
+#vert {
+    background-color: green;
+    padding: 100px 0;
+    color: white;
+    position: relative;
+}
+
+#orc {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+}
+
+
+/*** 4eme section ***/
+
+#bleu {
+    background-color: blue;
+    padding: 100px 0;
+    color: white;
+    position: relative;
+}
+
+#humain {
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .margeGauche {
+        margin-left: 0;
+    }
+    .margeDroite {
+        margin-left: 0;
+    }
+    header {
+        background-image: url(../img/wow4.png);
+        background-color: turquoise;
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+    #menu {
+        width: 10%;
+    }
+    #logo {
+        width: 30%;
+        right: 30px
+    }
+    h2 {
+        font-size: 18px
+    }
+    .boiteTexte,
+    #boutonJaune {
+        width: 100%
+    }
+    .boiteTexte p {
+        width: 90%;
+    }
+    #ilidan {
+        display: none;
+    }
+    #sorciere,
+    #orc,
+    #humain {
+        width: 90%;
+        position: static;
+        margin: 0 auto;
+    }
+    #vert .boiteTexte,
+    #bleu .boiteTexte {
+        display: none;
+    }
+}

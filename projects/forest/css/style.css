@@ -1,0 +1,67 @@
+
+body {
+  margin: 0;
+  background: #000;
+  background-size: cover;
+}
+video { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#quote {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  position: fixed;
+  width: 100%;
+  height: 17%;
+  text-align: center;
+  color: white;
+  transition: .4s;
+  margin-bottom: 5%;
+}
+header:hover {
+  background: rgba(255,255,255,0.8);
+  color: #000;
+  
+}
+h1 {
+  font-family: Moderne Sans, sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  letter-spacing: .5rem;
+  
+}
+nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+  letter-spacing: .2rem;
+  
+  
+}
+
+
+nav a:hover {
+  text-decoration: none;
+  color: green;
+  
+}
+h2 { 
+  font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
+  font-size: 8vmin;
+  text-align: center;
+  margin: 2rem 3rem 0;
+  mix-blend-mode: overlay;
+  color: #fff;
+  font-weight: 100;
+}

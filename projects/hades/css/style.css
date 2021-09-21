@@ -1,0 +1,294 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    @font-face {
+        font-family: 'hades';
+        src: url('../font/hades.otf')
+    }
+    /*** general ***/
+    
+    .resp {
+        width: 100%;
+        height: auto;
+    }
+    
+    .relative {
+        position: relative;
+    }
+    
+    .absol {
+        position: absolute;
+    }
+    
+    .droite {
+        float: right;
+    }
+    
+    .gauche {
+        float: left;
+    }
+    
+    .cls {
+        clear: both;
+    }
+    
+    h1,
+    h2 {
+        font-family: 'hades';
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 3em;
+        margin-bottom: 40px;
+    }
+    
+    p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+    }
+    
+    article {
+        width: 40%;
+        padding: 125px 50px;
+    }
+    
+    .mG {
+        margin-left: 50%;
+    }
+    
+    .pmG {
+        margin-left: 5%
+    }
+    /*** header ***/
+    /* header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    } */
+    
+    header nav {
+        background-color: #150B09;
+        height: 100px;
+    }
+    
+    #logo {
+        bottom: -70px;
+        left: 75px;
+        width: 25%;
+    }
+    
+    #hamb {
+        width: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 100px;
+        cursor: pointer;
+    }
+    
+    #hamb li {
+        height: 0;
+        border: solid 2px #FF0006;
+        margin: 10px 0;
+        list-style-type: none;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    
+    #hamb:hover li:nth-of-type(1) {
+        transform: rotate(45deg) translate(1px, 20px);
+    }
+    
+    #hamb:hover li:nth-of-type(2) {
+        opacity: 0;
+    }
+    
+    #hamb:hover li:nth-of-type(3) {
+        transform: rotate(-45deg) translate(1px, -20px);
+    }
+    /*** fond ***/
+    
+    #fond {
+        background-image: url('../img/wall.jpg');
+        height: calc(100vh - 100px);
+        background-size: cover;
+        background-position: top;
+    }
+    /*** main ***/
+    
+    h1 {
+        text-align: center;
+        font-family: "hades";
+        font-size: 3em;
+        background-color: #150B09;
+        padding: 20px 0;
+        color: white;
+    }
+    /*** zag ***/
+    
+    #zag {
+        background-color: #661A1A;
+        color: #FECE07;
+    }
+    
+    #imgZag {
+        bottom: 0px;
+        left: 100px;
+        width: 35%;
+    }
+    
+    #zag p {
+        text-align: right;
+    }
+    /*** hades ***/
+    
+    #hades {
+        background-color: #FECE07;
+        color: #661A1A;
+    }
+    
+    #imgHades {
+        right: 100px;
+        bottom: -10px;
+        width: 38%;
+    }
+    /*** than ***/
+    
+    #than {
+        background-color: #363A43;
+        color: #C376CE;
+    }
+    
+    #imgThan {
+        bottom: -10px;
+        left: 100px;
+        width: 45%;
+    }
+    /*** meg ***/
+    
+    #meg {
+        background-color: #2F56B7;
+        color: white;
+    }
+    
+    #imgMeg {
+        bottom: -4px;
+        right: 100px;
+        width: 40%;
+    }
+    /*** dieu ***/
+    
+    #dieux {
+        background-image: url('../img/fond2.jpeg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+    
+    .row {
+        padding: 50px 10px;
+    }
+    
+    .dieu {
+        width: 30%;
+        height: 300px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow-y: hidden;
+    }
+    
+    h3 {
+        text-align: center;
+        padding: 5px;
+        font-family: 'hades';
+        border-radius: 5px;
+        font-size: 2em;
+        width: 80%;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3em
+    }
+    
+    .ares {
+        background-image: url(../img/Ares.png);
+    }
+    
+    .ares h3 {
+        background-color: #FD2525;
+        color: #E7DBD0;
+    }
+    
+    .pose {
+        background-image: url(../img/Poseidon.png);
+    }
+    
+    .pose h3 {
+        background-color: #6F9C73;
+        color: #041112;
+    }
+    
+    .athe {
+        background-image: url(../img/Athena.png);
+    }
+    
+    .athe h3 {
+        background-color: #6976AD;
+        color: #FCFCA8;
+    }
+    
+    .zeus {
+        background-image: url(../img/zeus.png);
+    }
+    
+    .zeus h3 {
+        background-color: #FEF0A4;
+        color: #7A6552;
+    }
+    
+    .arte {
+        background-image: url(../img/Artemis.png);
+    }
+    
+    .arte h3 {
+        background-color: #507E3C;
+        color: #FFFFFF;
+    }
+    
+    .demet {
+        background-image: url(../img/Demeter.png);
+    }
+    
+    .demet h3 {
+        background-color: #ABD2D3;
+        color: #80674C;
+    }
+    
+    .dieu h3+p {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        height: 100%;
+        font-size: 1.3em;
+        padding: 50px 10px;
+        position: absolute;
+        display: none;
+        border-radius: 20px;
+    }
+    
+    @keyframes toTheTop {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+    .dieu:hover>p {
+        opacity: 1;
+        display: block;
+        animation: toTheTop 2s forwards;
+    }
